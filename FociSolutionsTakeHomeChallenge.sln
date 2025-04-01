@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FociSolutionsTakeHomeChallenge", "FociSolutionsTakeHomeChallenge\FociSolutionsTakeHomeChallenge.csproj", "{0A206A64-1FA4-43DB-968C-A3FCFB8BE72C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FociSolutionsTakeHomeChallenge.Tests", "FociSolutionsTakeHomeChallengeUnitTests\FociSolutionsTakeHomeChallenge.Tests.csproj", "{D4102059-AF24-453B-A374-D1F79B80ACEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A206A64-1FA4-43DB-968C-A3FCFB8BE72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A206A64-1FA4-43DB-968C-A3FCFB8BE72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A206A64-1FA4-43DB-968C-A3FCFB8BE72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A206A64-1FA4-43DB-968C-A3FCFB8BE72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4102059-AF24-453B-A374-D1F79B80ACEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4102059-AF24-453B-A374-D1F79B80ACEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4102059-AF24-453B-A374-D1F79B80ACEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4102059-AF24-453B-A374-D1F79B80ACEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D4B3191-A292-48BC-8AD5-88C430FBA3B1}
+	EndGlobalSection
+EndGlobal
