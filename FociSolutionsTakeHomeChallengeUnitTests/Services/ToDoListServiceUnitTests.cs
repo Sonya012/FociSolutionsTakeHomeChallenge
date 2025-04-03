@@ -86,16 +86,18 @@ namespace FociSolutionsTakeHomeChallenge.Tests.Services
         [Test]
         public void AddToDoItem_ShouldIncreaseInternalListCount()
         {
+            // Arrange
             var title = _fixture.Create<string>();
             var description = _fixture.Create<string>();
             var dueDate = _fixture.Create<DateTime>();
 
             _service.AddToDoItem(title, description, dueDate);
 
-            var todoItemsField = typeof(ToDoListService)
-                .GetField("_todoItems", BindingFlags.NonPublic | BindingFlags.Instance);
+            // Act
+            var todoItemsField = typeof(ToDoListService).GetField("_todoItems", BindingFlags.NonPublic | BindingFlags.Instance);
             var list = todoItemsField?.GetValue(_service) as List<ToDoItem>;
 
+            // Assert
             Assert.That(list?.Count, Is.EqualTo(1));
         }
 
@@ -166,6 +168,7 @@ namespace FociSolutionsTakeHomeChallenge.Tests.Services
         [Test]
         public void UpdateToDoItem_ShouldChangeItemProperties()
         {
+            // Arrange
             var title = "Original Title";
             var description = "Original Description";
             var dueDate = DateTime.Today;
@@ -176,13 +179,14 @@ namespace FociSolutionsTakeHomeChallenge.Tests.Services
             var newDescription = "Updated Description";
             var newDueDate = dueDate.AddDays(3);
 
+            // Act 
             _service.UpdateToDoItem(itemId, newTitle, newDescription, newDueDate);
 
-            var todoItemsField = typeof(ToDoListService)
-                .GetField("_todoItems", BindingFlags.NonPublic | BindingFlags.Instance);
+            var todoItemsField = typeof(ToDoListService).GetField("_todoItems", BindingFlags.NonPublic | BindingFlags.Instance);
             var list = todoItemsField?.GetValue(_service) as List<ToDoItem>;
             var updatedItem = list?.FirstOrDefault(i => i.ItemId == itemId);
 
+            // Assert
             Assert.That(updatedItem?.Title, Is.EqualTo(newTitle));
             Assert.That(updatedItem?.Description, Is.EqualTo(newDescription));
             Assert.That(updatedItem?.DueDate, Is.EqualTo(newDueDate));
